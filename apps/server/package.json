@@ -1,0 +1,27 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "private": true,
+    "devDependencies": {
+        "nodemon": "^3.0.2",
+        "ts-node": "^10.9.2",
+        "tsc-watch": "^6.0.4",
+        "typescript": "^5.3.3"
+    },
+    "scripts": {
+        "start": "node src/index.ts",
+        "dev": "nodemon src/index.ts",
+        "build": "tsc -p ."
+    },
+    "dependencies": {
+        "socket.io": "^4.7.2"
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "dist"
+    ]
+}
