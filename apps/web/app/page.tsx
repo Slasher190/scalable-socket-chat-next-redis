@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useSocket } from "../context/SocketProvider";
 import classes from "./page.module.css";
 const Page = () => {
-  const { sendMessage } = useSocket();
+  const { sendMessage, messages } = useSocket();
   const [message, setMessage] = useState("");
   return (
     <div>
@@ -22,6 +22,11 @@ const Page = () => {
         >
           Send
         </button>
+      </div>
+      <div>
+        {messages.map((msg, key) => (
+          <li key={key}>{msg}</li>
+        ))}
       </div>
     </div>
   );
